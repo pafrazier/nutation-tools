@@ -20,16 +20,16 @@ COL_BDR: tuple    = (_mid4,_mid4,_mid4)
 COL_HVR: tuple    = (_mid1,_mid2,_dark)
 COL_LBL: tuple    = (_lite,_lite,_lite)
 
-def hx(col: tuple): 
+def rgb2hex(col: tuple): 
     return '#%02x%02x%02x'%col
 
 THEME_COLOURS = {
-    'background': hx(COL_FRAME),
-    'primary':    hx(COL_LBL),
-    'foreground': hx(COL_LBL),
-    'border':     hx(COL_BDR),
-    'primary>button.hoverBackground':  hx(COL_HVR),
-    'primary>button.activeBackground': hx(COL_BTN_DN),
+    'background': rgb2hex(COL_FRAME),
+    'primary':    rgb2hex(COL_LBL),
+    'foreground': rgb2hex(COL_LBL),
+    'border':     rgb2hex(COL_BDR),
+    'primary>button.hoverBackground':  rgb2hex(COL_HVR),
+    'primary>button.activeBackground': rgb2hex(COL_BTN_DN),
 }
 
 # -------------------------------- Sizes 
