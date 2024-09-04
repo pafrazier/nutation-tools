@@ -1,30 +1,32 @@
 import PySide6.QtWidgets as psw
 import PySide6.QtGui as psg
-import constants as c
+import constants as con
 
 # --------------------------------------------------------------------
 
-class Button(psw.QPushButton):
+class Button(psw.QToolButton):
     
     
-    def __init__(
-            self, text: str = '', 
-            min_size: tuple = c.SZ_BTN,
-            max_size: tuple = c.SZ_BTN,
+    def __init__( 
+            self, 
+            text: str = '',
+            size: tuple = con.SZ_BTN,
+            toggle: bool = 0, 
+            *args, **kw
         ):
-        super().__init__()
+        super().__init__(*args, **kw)
         
-        self.setMinimumSize(*min_size)
-        self.setMaximumSize(*max_size)
         self.setText(text)
+        self.setFixedSize(*size)
+        self.isCheckable() if toggle else None
 
 # --------------------------------------------------------------------
 
 class Image(psw.QLabel):
 
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, *args, **kw):
+        super().__init__(*args, **kw)
        
         self.pmap = psg.QPixmap('0.jpg')
         self.setPixmap(self.pmap)
@@ -37,5 +39,7 @@ class InfoLabel(psw.QLabel):
     def __init__(self, *args, **kw):
         super().__init__(*args, **kw)
 
-        self.setMinimumWidth(c.SZ_BTN[0])
+        self.setMinimumWidth(con.SZ_BTN[0])
+
+
 

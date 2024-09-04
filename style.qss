@@ -1,0 +1,41 @@
+QWidget {
+	color: rgb(217,217,217);
+	padding: 0px;
+	background-color: rgb(65,65,65);
+}
+QToolButton {
+	border-style: solid;
+	border-top-color: rgb(127,127,127);
+	border-right-color: rgb(127,127,127);
+	border-left-color: rgb(127,127,127);
+	border-bottom-color: rgb(127,127,127);
+	border-width: 1px;
+	border-radius: 1px;
+	color: rgb(217,217,217);
+	padding: 0px;
+	background-color: rgb(85,85,85);
+}
+QToolButton:hover{
+	border-style: solid;
+	border-top-color: rgb(127,127,127);
+	border-right-color: rgb(127,127,127);
+	border-left-color: rgb(127,127,127);
+	border-bottom-color: rgb(127,127,127);
+	border-width: 1px;
+	border-radius: 1px;
+	color: rgb(217,217,217);
+	padding: 0px;
+	background-color: rgb(88,101,75);
+}
+QToolButton:pressed{
+	border-style: solid;
+	border-top-color: rgb(127,127,127);
+	border-right-color: rgb(127,127,127);
+	border-left-color: rgb(127,127,127);
+	border-bottom-color: rgb(127,127,127);
+	border-width: 1px;
+	border-radius: 1px;
+	color: rgb(217,217,217);
+	padding: 0px;
+	background-color: rgb(88,88,75);
+}
